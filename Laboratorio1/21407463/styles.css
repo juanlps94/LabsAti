@@ -90,7 +90,7 @@ header button:hover {
 }
 
 .cuadro-informativo:hover {
-    background-color: #c1cfff;
+    background-color: #99c5dd;
     cursor: pointer;
     rotate: 5deg;
 }
@@ -139,7 +139,7 @@ li {
 }
 
 .contenido-cuadro {
-    color: #a3b6df;
+    color: #1266e4;
     line-height: 1.5;
 }
 
