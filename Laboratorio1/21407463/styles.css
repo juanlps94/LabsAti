@@ -1,0 +1,153 @@
+.img-perfil {
+    width:360px;
+    height:360px;
+    float: left;
+    border-top-left-radius: 20%;
+}
+
+h1{
+    color:#ff7514; 
+    font-size: 40pt;
+    line-height: 0%;
+}
+
+p{
+    font-family: Georgia;
+    line-height: 19px;
+}
+
+#caja {
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+    float: left;
+    width: 640px;
+    height: 336px;
+    border: 2px solid #ff7514;
+    box-shadow: 5px 5px gray;
+}
+
+a:link{
+    color: orange;
+
+}
+
+a:visited{
+    color: red;
+}
+
+
+/* */
+
+header {
+    background-color: #83afe7;
+    padding: 0px 20px;
+}
+
+footer {
+    background-color: #83afe7;
+    padding: 10px 20px;
+    margin-bottom: 0px; /* Empuja el footer hacia la parte inferior */
+    text-align: center; /* Opcional: centra el texto del footer */
+    }
+
+header ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li {
+    color: white;
+    margin: 0px 20px;
+}
+
+header ul li:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header ul li:last-child {
+    display: flex;
+    margin-right: 0;
+}
+
+header button {
+    background-color: #E0E0E0;
+    color: #333;
+    border: none;
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #D0D0D0;
+}
+
+.cuadro-informativo:hover {
+    background-color: #c1cfff;
+    cursor: pointer;
+    rotate: 5deg;
+}
+
+.text-foot {
+    margin: 0;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.img-index {
+    width: 150px;
+    height: 150px;
+    margin: 0px 20px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.cuadro-informativo {
+    background-color: #F0F0F0;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.contenido-cuadro {
+    color: #a3b6df;
+    line-height: 1.5;
+}
+
+span {
+    display: inline-block;
+    width: 2px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+}
