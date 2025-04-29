@@ -1,3 +1,6 @@
+
+/*perfil.html*/
+
 .img-perfil {
     width:360px;
     height:360px;
@@ -38,7 +41,7 @@ a:visited{
 }
 
 
-/* */
+/* index.html */
 
 header {
     background-color: #83afe7;
@@ -48,8 +51,8 @@ header {
 footer {
     background-color: #83afe7;
     padding: 10px 20px;
-    margin-bottom: 0px; /* Empuja el footer hacia la parte inferior */
-    text-align: center; /* Opcional: centra el texto del footer */
+    margin-bottom: 0px;
+    text-align: center;
     }
 
 header ul {
