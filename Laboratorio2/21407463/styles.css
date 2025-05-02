@@ -169,18 +169,19 @@ span {
     background-color: #ffffff;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
     .img-container{
         width: 124px;
         height: 124px;
     }
 
     #caja {
+        background-color: #83afe7;
         padding: 10px;
         margin-left: 5px;
         margin-top: 10px;
         float: left;
-        width: 180px;
+        width: 260px;
         height: 100px;
         border: 2px solid #ff7514;
         box-shadow: 5px 5px gray;
@@ -208,11 +209,12 @@ span {
     }
 
     #caja {
+        background-color: aqua;
         padding: 10px;
         margin-left: 5px;
         margin-top: 10px;
         float: left;
-        width: 370px;
+        width: 495px;
         height: 168px;
         border: 2px solid #ff7514;
         box-shadow: 5px 5px gray;
@@ -239,6 +241,7 @@ span {
     }
 
     #caja {
+        background-color: burlywood;
         padding: 10px;
         margin-left: 5px;
         margin-top: 10px;
