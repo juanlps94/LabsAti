@@ -34,12 +34,17 @@ const nombreDelArchivo = rutaDelArchivo.substring(rutaDelArchivo.lastIndexOf('/'
     }
 
 
-    async function cargarDatos() {
+    async function cargarDatos(cedula) {
         console.log("Cargando datos...");
         try {
-            const respuesta = await fetch('reto3/21407463/perfil.json');
+            const respuesta = await fetch(`reto3/${cedula}/perfil.json`);
             const perfil = await respuesta.json();
             console.log("Datos de perfil cargados.");
+
+            console.log(`reto3/${cedula}/${perfil.imagen}`); // Mostrar el perfil en la consola para verificar su contenido
+            
+            const foto = document.querySelector('.img-perfil'); // Asegúrate de tener un elemento con esta clase en tu HTML
+            foto.src = `reto3/${cedula}/${perfil.imagen}`; // Usamos la ruta de la imagen del JSON
 
             const parrafoNombre = document.querySelector('.nombre');
             parrafoNombre.textContent = perfil.nombre; // Mostrar el nombre en el párrafo con clase "nombre"
@@ -111,7 +116,11 @@ const nombreDelArchivo = rutaDelArchivo.substring(rutaDelArchivo.lastIndexOf('/'
                     // Crear el elemento <ul>
                     const ulElement = document.createElement('ul');
                     ulElement.classList.add('cuadro-informativo');
-                
+                    ulElement.addEventListener('click', function() {
+                        const ci = persona.ci; // Cambia esto según la estructura de tu JSON
+                        window.location.href = `perfil.html?ci=${persona.ci}`; // Cambia esto según la estructura de tu URL
+                    }
+                    );
                     // Crear el elemento <li>
                     const liElement = document.createElement('li');
                     liElement.classList.add('titulo-cuadro');
@@ -150,6 +159,12 @@ if (nombreDelArchivo === 'index.html') {
     cargarAlumnos(); // Llamar a la función para cargar y mostrar los alumnos
 }
 if (nombreDelArchivo === 'perfil.html') {
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const ci = urlParams.get('ci'); // Obtener el valor del parámetro "ci" de la URL
+        console.log(ci); // Mostrar el valor en la consola");
     cargarJSON(); // Llamar a la función para cargar y mostrar el JSON
-    cargarDatos(); // Llamar a la función para cargar y mostrar los datos
+    cargarDatos(ci); // Llamar a la función para cargar y mostrar los datos
+
+    })
 }

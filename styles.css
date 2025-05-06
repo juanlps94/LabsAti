@@ -1,9 +1,6 @@
 
 
 /*perfil.html*/
-.dato_color {
-    color: #ff7514;
-}
 .container {
     display: flex;
     flex-direction: row;
@@ -21,6 +18,7 @@
     margin: 10px 10px 0px 0px;
     float: left;
     border-top-left-radius: 20%;
+    box-shadow: 5px 5px gray;
 }
 
 #caja {
@@ -30,19 +28,19 @@
     float: left;
     width: 800px;
     max-height: 336px;
-    border: 2px solid #ff7514;
+    border: 2px solid #5456f1;
     box-shadow: 5px 5px gray;
 }
 
 h1{
-    color:#ff7514; 
+    color:#000000; 
     font-size: 40pt;
     line-height: 0%;
 }
 
 p{
     font-family: Georgia;
-    line-height: 19px;
+    line-height: 20px;
 }
 
 
@@ -190,7 +188,6 @@ span {
     }
 
     h1{
-        color:#ff7514; 
         font-size: 12pt;
         line-height: 0%;
     }
@@ -223,7 +220,6 @@ span {
     }
 
     h1{
-        color:#ff7514; 
         font-size: 20pt;
         line-height: 0%;
     }
@@ -255,7 +251,6 @@ span {
     }
 
     h1{
-        color:#ff7514; 
         font-size: 30pt;
         line-height: 0%;
     }
