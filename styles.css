@@ -1,7 +1,9 @@
 
 
 /*perfil.html*/
-
+.dato_color {
+    color: #ff7514;
+}
 .container {
     display: flex;
     flex-direction: row;
@@ -26,7 +28,7 @@
     margin-left: 5px;
     margin-top: 10px;
     float: left;
-    max-width: 640px;
+    width: 800px;
     max-height: 336px;
     border: 2px solid #ff7514;
     box-shadow: 5px 5px gray;
