@@ -1,4 +1,4 @@
-const perfiles = [
+[
     {
         "ci":"21407463",
         "imagen":"21407463\/21407463.png",
@@ -98,4 +98,4 @@ const perfiles = [
         "imagen": "18836874\/18836874.jpg",
         "nombre": "Jorge Gavidia"
     }
-];
+]
