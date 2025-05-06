@@ -1,0 +1,14 @@
+perfil = {
+    "nombre": "Juan Perez",
+    "descripcion": "Soy estudiante del 7mo semestre de Computación de la UCV actualmente estoy interesado en el area de la inteligencia artificial. Soy un aficionado por los videojuegos en general y el deporte, tambien voy al gimnasio porque me gusta mantenerme activo y sano.",
+    "color" : "Naranja",
+    "libro" : "Fahrenheit 451",
+    "musica" : "Salsa, merengue, joropo, reggaeton",
+    "video_juego" : ["Call of Duty: Warzone", "Saga Souls", "Hollow Knight"],
+    "lenguajes" : ["c", "c++", "java", "Stack MERN"],
+    "email" : "",
+    "ci" : "21407463",
+    "genero" : "Masculino",
+    "fecha_nacimiento" : "29/08/1994",
+    "imagen" : "21407463.png"
+}
