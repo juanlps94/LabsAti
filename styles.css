@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
 
 /*perfil.html*/
@@ -125,9 +130,11 @@ header button:hover {
     margin: 0px 20px;
 }
 
+
 #contenedor-principal {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1; 
     justify-content: center;
     padding: 20px;
 }
