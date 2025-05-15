@@ -1,8 +1,20 @@
-html, body {
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
+
 
 
 /*perfil.html*/
@@ -11,13 +23,14 @@ html, body {
     flex-direction: row;
     height: 100vh;
 }
+
 .img-perfil {
     width: 100%;
     height: 100%;
     border-top-left-radius: 20%;
 }
 
-.img-container{
+.img-container {
     max-width: 360px;
     max-height: 360px;
     margin: 10px 10px 0px 0px;
@@ -37,24 +50,24 @@ html, body {
     box-shadow: 5px 5px gray;
 }
 
-h1{
-    color:#000000; 
+h1 {
+    color: #000000;
     font-size: 40pt;
     line-height: 0%;
 }
 
-p{
+p {
     font-family: Georgia;
     line-height: 20px;
 }
 
 
-a:link{
+a:link {
     color: orange;
 
 }
 
-a:visited{
+a:visited {
     color: red;
 }
 
@@ -71,7 +84,7 @@ footer {
     padding: 10px 20px;
     margin-bottom: 0px;
     text-align: center;
-    }
+}
 
 header ul {
     padding: 0;
@@ -127,16 +140,15 @@ header button:hover {
 .img-index {
     width: 150px;
     height: 150px;
-    margin: 0px 20px;
 }
 
 
 #contenedor-principal {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1; 
+    flex-grow: 1;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 ul,
@@ -148,23 +160,25 @@ li {
 
 li {
     display: inline;
-    margin-right: 20px;
 }
 
 .cuadro-informativo {
     background-color: #F0F0F0;
     border: 1px solid #D0D0D0;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     width: 200px;
-    height: 200px;
+    height: auto;
     text-align: center;
+}
+
+.cuadro-informativo p {
+    margin: 10px 0px 0px 0px;
 }
 
 .contenido-cuadro {
     color: #1266e4;
-    line-height: 1.5;
 }
 
 span {
@@ -176,8 +190,9 @@ span {
     background-color: #ffffff;
 }
 
+/* css para media queries perfil.html*/
 @media (max-width: 480px) {
-    .img-container{
+    .img-container {
         width: 124px;
         height: 124px;
     }
@@ -194,22 +209,22 @@ span {
         box-shadow: 5px 5px gray;
     }
 
-    h1{
+    h1 {
         font-size: 12pt;
         line-height: 0%;
     }
-    
-    p{
+
+    p {
         font-family: Georgia;
         line-height: 6px;
         font-size: 5px;
     }
-    
+
 }
 
 @media (min-width:481px) and (max-width: 768px) {
 
-    .img-container{
+    .img-container {
         width: 192px;
         height: 192px;
     }
@@ -226,45 +241,137 @@ span {
         box-shadow: 5px 5px gray;
     }
 
-    h1{
+    h1 {
         font-size: 20pt;
         line-height: 0%;
     }
-    
-    p{
+
+    p {
         font-family: Georgia;
         line-height: 10px;
         font-size: 8px;
     }
-    
+
 }
 
-@media (min-width:769px) and (max-width: 1024px) {
-    .img-container{
-        width: 216px;
-        height: 216px;
+/* css para media queries index.html usando grid*/
+@media (max-width: 480px) {
+    #contenedor-principal {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
     }
 
-    #caja {
-        background-color: burlywood;
-        padding: 10px;
-        margin-left: 5px;
-        margin-top: 10px;
-        float: left;
-        width: 640px;
-        height: 192px;
-        border: 2px solid #ff7514;
-        box-shadow: 5px 5px gray;
+    .cuadro-informativo {
+        margin: 10px;
+        width: 60px;
+        height: 60px;
+        padding: 10px 10px 70px 10px;
     }
 
-    h1{
-        font-size: 30pt;
-        line-height: 0%;
+    .img-index {
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px;
     }
-    
-    p{
-        font-family: Georgia;
-        line-height: 13px;
-        font-size: 12px;
+
+    .contenido-cuadro {
+        font-size: 10px;
+        margin: 0px;
     }
+
+    .copy_right {
+        margin: 0;
+        color: black;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin: 0px 5px;
+        font-size: 10px;
+    }
+
+    header ul li:first-child {
+        font-size: 10px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #contenedor-principal {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .cuadro-informativo {
+        margin: 10px;
+        width: 150px;
+        height: 150px;
+        padding: 10px 10px 40px 10px;
+    }
+
+    .img-index {
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px;
+    }
+
+    .contenido-cuadro {
+        font-size: 10px;
+        margin: 0px;
+    }
+
+    .copy_right {
+        margin: 0;
+        color: black;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin: 0px 5px;
+        font-size: 10px;
+    }
+
+    header ul li:first-child {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 724px) and (max-width: 768px) {
+    #contenedor-principal {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #contenedor-principal {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    .cuadro-informativo {
+        margin: 10px;
+        width: 150px;
+        padding: 10px 10px;
+    }
+
+    .img-index {
+        width: 120px;
+        height: 120px;
+        margin: 0px 0px;
+    }
+
+    .contenido-cuadro {
+        font-size: 13px;
+        margin: 0px;
+    }
+
 }

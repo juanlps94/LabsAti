@@ -114,9 +114,10 @@ async function cargarIndex(lang) {
         console.log("Index cargado.");
 
         const parrafoSitio = document.querySelector('.sitio');
-        index.sitio.forEach(element => {
-            parrafoSitio.textContent = parrafoSitio.textContent + ' ' + element; // Mostrar el sitio en el párrafo con clase "sito"
-        });
+
+        sitio = `${index.sitio[0]} <sub>${index.sitio[1]}</sub> ${index.sitio[2]}`; // Crear la cadena del sitio
+        parrafoSitio.innerHTML = sitio; // Mostrar el sitio en el párrafo con clase "sito"
+       
 
         const parrafoSaludo = document.querySelector('.saludo');
         parrafoSaludo.textContent = index.saludo + ' ' + perfil.nombre; // Mostrar el saludo en el párrafo con clase "saludo"
