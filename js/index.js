@@ -62,7 +62,7 @@ async function cargarDatos(cedula) {
         const perfil = await respuesta.json();
         console.log("Datos de perfil cargados.");
 
-        const foto = document.querySelector('.img-perfil'); // Asegúrate de tener un elemento con esta clase en tu HTML
+        const foto = document.querySelector('.img-perfil');
         foto.src = `${ci}/${perfil.imagen}`; // Usamos la ruta de la imagen del JSON
 
         const parrafoNombre = document.querySelector('.nombre');
@@ -142,7 +142,7 @@ async function cargarAlumnos() {
         console.log("Alumnos cargados.");
 
         // Cargando los alumos en la pagina
-        const contenedorPrincipal = document.getElementById('contenedor-principal'); // Asegúrate de tener un elemento con este ID en tu HTML
+        const contenedorPrincipal = document.getElementById('contenedor-principal');
 
         if (contenedorPrincipal && Array.isArray(alumnos)) {
             alumnos.forEach(persona => {
@@ -150,8 +150,8 @@ async function cargarAlumnos() {
                 const ulElement = document.createElement('ul');
                 ulElement.classList.add('cuadro-informativo');
                 ulElement.addEventListener('click', function () {
-                    const ci = persona.ci; // Cambia esto según la estructura de tu JSON
-                    window.location.href = `perfil.html?ci=${persona.ci}`; // Cambia esto según la estructura de tu URL
+                    const ci = persona.ci; 
+                    window.location.href = `perfil.html?ci=${persona.ci}`; 
                 }
                 );
                 // Crear el elemento <li>
@@ -199,12 +199,12 @@ if (nombreDelArchivo === 'index.html') {
         /*boton2 = document.querySelector('.reset');
 
         boton2.addEventListener('click', function () {
-            mensaje = document.querySelector('.mensaje'); // Asegúrate de tener un elemento con esta clase en tu HTML
+            mensaje = document.querySelector('.mensaje');
             if (mensaje) {
                 mensaje.remove(); // Eliminar el mensaje de error si existe
             }
 
-            const divContenedor = document.querySelector('#contenedor-principal'); // Asegúrate de tener un elemento con esta clase en tu HTML
+            const divContenedor = document.querySelector('#contenedor-principal'); 
             const listasUl = divContenedor.querySelectorAll('ul'); // Selecciona todos los ul dentro del div
             console.log("Resetear busqueda"); // Imprimir en la consola
             listasUl.forEach(function (lista) {
@@ -216,11 +216,11 @@ if (nombreDelArchivo === 'index.html') {
             if (document.querySelector('.mensaje')) {
                 document.querySelector('.mensaje').remove(); // Eliminar el mensaje de error si existe
             }
-            const input = document.querySelector('.input-buscar'); // Asegúrate de tener un elemento con esta clase en tu HTML
+            const input = document.querySelector('.input-buscar');
             valor = (input.value).toString(); // Obtener el valor del input y convertirlo a string
             valor = valor.toUpperCase(); // Convertir el valor a mayúsculas
             console.log(valor); // Imprimir el valor en la consola
-            const divContenedor = document.querySelector('#contenedor-principal'); // Asegúrate de tener un elemento con esta clase en tu HTML
+            const divContenedor = document.querySelector('#contenedor-principal');
             const listasUl = divContenedor.querySelectorAll('ul'); // Selecciona todos los ul dentro del div
             let contador = 0; // Inicializa un contador para contar los elementos que coinciden con el valor de búsqueda
             
