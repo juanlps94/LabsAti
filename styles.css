@@ -78,7 +78,11 @@ header {
     background-color: #83afe7;
     padding: 0px 20px;
 }
-
+.div-contenedor {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+}
 footer {
     background-color: #83afe7;
     padding: 10px 20px;
@@ -190,6 +194,10 @@ span {
     background-color: #ffffff;
 }
 
+a:visited {
+    color: #1266e4;
+
+}
 /* css para media queries perfil.html*/
 @media (max-width: 480px) {
     .img-container {
