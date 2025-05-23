@@ -45,8 +45,8 @@ body {
     margin-top: 10px;
     float: left;
     width: 800px;
-    max-height: 336px;
-    border: 2px solid #5456f1;
+    max-height: 360px;
+    border: 2px solid #ff7514;
     box-shadow: 5px 5px gray;
 }
 
@@ -62,12 +62,12 @@ p {
 }
 
 
-a:link {
+.linkRef:hover {
     color: orange;
 
 }
 
-a:visited {
+.linkRef:visited {
     color: red;
 }
 
@@ -206,13 +206,12 @@ a:visited {
     }
 
     #caja {
-        background-color: #83afe7;
         padding: 10px;
         margin-left: 5px;
         margin-top: 10px;
         float: left;
         width: 260px;
-        height: 100px;
+        height: 124px;
         border: 2px solid #ff7514;
         box-shadow: 5px 5px gray;
     }
@@ -238,13 +237,12 @@ a:visited {
     }
 
     #caja {
-        background-color: aqua;
         padding: 10px;
         margin-left: 5px;
         margin-top: 10px;
         float: left;
         width: 495px;
-        height: 168px;
+        height: 192px;
         border: 2px solid #ff7514;
         box-shadow: 5px 5px gray;
     }
@@ -272,20 +270,20 @@ a:visited {
 
     .cuadro-informativo {
         margin: 10px;
-        width: 60px;
-        height: 60px;
-        padding: 10px 10px 70px 10px;
+        width: 80px;
+        height: 120px;
+        padding: 10px 10px 10px 10px;
     }
 
     .img-index {
-        width: 100%;
-        height: 100%;
+        width: 50px;
+        height: 50px;
         margin: 0px 0px;
     }
 
     .contenido-cuadro {
         font-size: 10px;
-        margin: 0px;
+        line-height: 10px;
     }
 
     .copy_right {

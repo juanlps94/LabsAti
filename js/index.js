@@ -83,7 +83,7 @@ async function cargarDatos(cedula) {
         const parrafoLenguaje = document.querySelector('.lenguajes');
         parrafoLenguaje.textContent = parrafoLenguaje.textContent + perfil.lenguajes; // Mostrar el lenguaje en el párrafo con clase "lenguaje"
 
-        const linkEmail = `<a href=#>${perfil.email}</a>`;
+        const linkEmail = `<a class="linkRef" href=#>${perfil.email}</a>`;
 
         const parrafoEmail = document.querySelector('.email');
         parrafoEmail.innerHTML = parrafoEmail.textContent + linkEmail; // Mostrar el email en el párrafo con clase "email"
