@@ -13,7 +13,7 @@ if (!paramslang.has("lang")) { // Verificamos si ya hay un parámetro ?lang en l
 // Cargar el archivo JSON y mostrar su contenido en la consola
 async function cargarJSON(lang) {
     console.log("Cargando JSON...");
-    let idioma = lang; // Convertir el idioma a mayúsculas para que coincida con el nombre del archivo
+    let idioma = lang; 
     if (idioma === 'en') {
         idioma = 'configEN.json';
     } else if (idioma === 'es') {
@@ -83,7 +83,7 @@ async function cargarDatos(cedula) {
         const parrafoLenguaje = document.querySelector('.lenguajes');
         parrafoLenguaje.textContent = parrafoLenguaje.textContent + perfil.lenguajes; // Mostrar el lenguaje en el párrafo con clase "lenguaje"
 
-        const linkEmail = `<a class="linkRef" href=#>${perfil.email}</a>`;
+        const linkEmail = `<a class="linkRef" href="mailto:${perfil.email}">${perfil.email}</a>`;
 
         const parrafoEmail = document.querySelector('.email');
         parrafoEmail.innerHTML = parrafoEmail.textContent + linkEmail; // Mostrar el email en el párrafo con clase "email"
