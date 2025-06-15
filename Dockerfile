@@ -1,18 +1,14 @@
+# Imagen de Ubuntu
 FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y apache2 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Instalación de dependencias y Python
+RUN apt-get update && apt-get install -y python3 python3-pip \
+    && pip3 install --break-system-packages flask uwsgi
 
-# Habilitar el módulo rewrite de Apache (común para muchas páginas web dinámicas)
-RUN a2enmod rewrite
+# Copiar los archivos de la app
+COPY . /app
+WORKDIR /app
 
-COPY . /var/www/html/
-	
-RUN chown -R www-data:www-data /var/www/html/
-RUN chmod -R 755 /var/www/html/
-
+# Puerto 80 para el host
 EXPOSE 80
-
-CMD ["apache2ctl", "-D", "FOREGROUND"]
+CMD ["uwsgi", "--http", "0.0.0.0:80", "--wsgi-file", "app.py", "--callable", "app"]

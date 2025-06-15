@@ -108,6 +108,7 @@ async function cargarIndex(lang) {
     } else {
         idioma = 'configES.json'; // Valor por defecto si no se proporciona un idioma válido
     }
+    
     try {
         const respuesta = await fetch(`conf/${idioma}`);
         const datos = await fetch('21407463/perfil.json');
@@ -190,7 +191,8 @@ async function cargarAlumnos() {
     }
 }
 
-if (nombreDelArchivo === 'index.html') {
+if (nombreDelArchivo === '') {
+    console.log("Cargando index.js...");
     document.addEventListener('DOMContentLoaded', function () {
         const urlParams = new URLSearchParams(window.location.search);
         const lang = urlParams.get('lang'); // Obtener el valor del parámetro "lang" de la URL
@@ -198,21 +200,6 @@ if (nombreDelArchivo === 'index.html') {
         cargarAlumnos(); // Llamar a la función para cargar y mostrar los alumnos
 
         boton = document.querySelector('.buscar');
-        /*boton2 = document.querySelector('.reset');
-
-        boton2.addEventListener('click', function () {
-            mensaje = document.querySelector('.mensaje');
-            if (mensaje) {
-                mensaje.remove(); // Eliminar el mensaje de error si existe
-            }
-
-            const divContenedor = document.querySelector('#contenedor-principal'); 
-            const listasUl = divContenedor.querySelectorAll('ul'); // Selecciona todos los ul dentro del div
-            console.log("Resetear busqueda"); // Imprimir en la consola
-            listasUl.forEach(function (lista) {
-                    lista.style.display = 'block';
-            });
-        });*/
 
         boton.addEventListener('click', function () {
             if (document.querySelector('.mensaje')) {
